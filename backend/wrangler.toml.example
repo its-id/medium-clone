@@ -1,9 +1,10 @@
 name = "medium-clone"
 compatibility_date = "2023-12-01"
 
-# [vars]
+[vars]
 # MY_VARIABLE = "production_value"
 DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=[YOUR_API_KEY]"
+JWT_SECRET="jwtsecret123"
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"

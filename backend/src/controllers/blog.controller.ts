@@ -7,7 +7,8 @@ export const getBlogs = factory.createHandlers(async (c) => {
 });
 
 export const getBlog = factory.createHandlers(async (c) => {
-  return c.text('Current Blog!');
+  // console.log('userId', c.get('userId'));
+  return c.text(`Current Blog for userId: ${c.get('userId')}, email: ${c.get('email')}!`);
 });
 
 export const updateBlog = factory.createHandlers(async (c) => {

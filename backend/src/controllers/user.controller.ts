@@ -84,6 +84,6 @@ export const signIn = factory.createHandlers(async (c) => {
 
     return c.json({ user, token: jwt, msg: 'Signed In Successfully!' }, 201);
   } catch (e) {
-    return c.status(403);
+    return c.json({ error: 'Internal Server Error' }, 500);
   }
 });

@@ -1,9 +1,9 @@
 import { Hono } from 'hono';
 import {
   createBlog,
+  deleteBlog,
   getBlog,
-  getBlogs,
-  updateBlog,
+  updateBlog
 } from '../controllers/blog.controller';
 import { authMiddleware } from '../middleware/auth';
 
@@ -22,6 +22,7 @@ blogRouter.use('/*', authMiddleware);
 blogRouter
   .get('/:id', ...getBlog)
   .post('/', ...createBlog)
-  .put('/:id', ...updateBlog);
+  .put('/:id', ...updateBlog)
+  .delete('/:id', ...deleteBlog);
 
 export default blogRouter;

@@ -12,6 +12,7 @@ const app = new Hono<{
   };
   Variables: {
     userId: string;
+    email: string;
   };
 }>().basePath('/api/v1');
 
